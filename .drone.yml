@@ -1,6 +1,13 @@
 pipeline:
-  backend:
-    image: node:6
+  build:
+    image: golang
     commands:
-      - npm install
-      - npm start
+      - go build
+      - go test
+
+services:
+  database:
+    image: mysql
+
+  cache:
+    image: redis
