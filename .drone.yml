@@ -3,4 +3,4 @@ pipeline:
     image: node:6
     commands:
       - npm install
-      - npm test
+      - npm start
